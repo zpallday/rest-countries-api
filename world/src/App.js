@@ -1,19 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Navbar'
+import Rounter from './components/Rounter'
 
 function App() {
   return (
     <div className="App">
       <Nav/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Learn</h1>
-      </header>
+      <Rounter />
     </div>
   );
 }
