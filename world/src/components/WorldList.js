@@ -16,16 +16,30 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <ul>
+      <section className="container">
         { this.state.persons.map(char => <Card> 
-      <Image src={char.flag} wrapped ui={false} /> 
+        <div className="flags">
+       <Image src={char.flag}/> 
+       </div>
         <Card.Content> 
-        <Card.Header>{char.population}</Card.Header> 
-        <Card.Meta>{char.region}</Card.Meta> 
+        <div className='name'>
+        <Card.Header>{char.name}</Card.Header>
+        </div>
+        <div className="pop">
+        <p>Population:</p>
+        <Card.Meta>{char.population}</Card.Meta> 
+        </div>
+        <div className='reg'>
+        <p>Region:</p>
+        <Card.Meta>{char.region}</Card.Meta>
+        </div>
+        <div className="cap">
+        <p>Capital:</p>
         <Card.Description>{char.capital}</Card.Description> 
+        </div>
         </Card.Content> 
   </Card> )}
-      </ul>
+      </section>
     
 
     )

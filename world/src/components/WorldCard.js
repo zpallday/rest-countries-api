@@ -7,7 +7,7 @@ export default function WorldCard({ char }) {
       <Image src={char.flag} wrapped ui={false} /> 
         <Card.Content> 
         <Card.Header>{char.population}</Card.Header> 
-        <Card.Meta>{char.region}</Card.Meta> 
+        <Card.Meta>{char.region}</Card.Meta>
         <Card.Description>{char.capital}</Card.Description> 
         </Card.Content> 
   </Card> 
