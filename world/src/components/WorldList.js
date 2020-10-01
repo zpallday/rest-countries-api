@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react'; 
+import { Link } from 'react-router-dom'
+
+
 export default class PersonList extends React.Component {
   state = {
-    persons: []
+    persons: [],
   }
 
   componentDidMount() {
@@ -12,9 +15,11 @@ export default class PersonList extends React.Component {
         const persons = res.data;
         this.setState({ persons });
       })
-  }
+  };
+
 
   render() {
+    
     return (
       <section className="container">
         { this.state.persons.map(char => <Card> 
@@ -27,7 +32,7 @@ export default class PersonList extends React.Component {
         </div>
         <div className="pop">
         <p>Population:</p>
-        <Card.Meta>{char.population}</Card.Meta> 
+        <Card.Meta>{char.population.toLocaleString()}</Card.Meta> 
         </div>
         <div className='reg'>
         <p>Region:</p>
@@ -38,6 +43,9 @@ export default class PersonList extends React.Component {
         <Card.Description>{char.capital}</Card.Description> 
         </div>
         </Card.Content> 
+        {/* <div className="col-md-3">
+                        <Link to={`/launch${flight_number}`} className="btn btn-secondary">Launch Details</Link>
+                   </div> */}
   </Card> )}
       </section>
     
