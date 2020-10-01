@@ -1,20 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Navbar'
-
+import Rounter from './components/Rounter'
+import SearchForm from './components/SearchForm'
+import RegionForm from './components/RegionForm'
+// import Details from './components/Details'
 function App() {
   return (
+    <body>
     <div className="App">
       <Nav/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Learn</h1>
-      </header>
+      <div className="forms">
+      <SearchForm/>
+      <RegionForm/>
+      </div>
+      <Rounter />
     </div>
+    {/* <Details /> */}
+    </body>
   );
 }
 
