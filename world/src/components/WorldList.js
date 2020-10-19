@@ -21,31 +21,23 @@ export default class PersonList extends React.Component {
   render() {
     
     return (
-      <section className="container">
+      <section className="h-full max-w-xs overflow-hidden rounded shadow-sm bg-primary">
         { this.state.persons.map(char => <Card> 
-        <div className="flags">
-       <Image src={char.flag}/> 
-       </div>
+          <div className="h-48">
+        <div className="object-fill w-full h-full"><Image src={char.flag}/></div>
+        </div>
+       <div className="px-6 py-4">
         <Card.Content> 
-        <div className='name'>
+        <div className='mb-2 text-xl font-bold'>
         <Card.Header>{char.name}</Card.Header>
         </div>
-        <div className="pop">
-        <p>Population:</p>
-        <Card.Meta>{char.population.toLocaleString()}</Card.Meta> 
-        </div>
-        <div className='reg'>
-        <p>Region:</p>
-        <Card.Meta>{char.region}</Card.Meta>
-        </div>
-        <div className="cap">
-        <p>Capital:</p>
-        <Card.Description>{char.capital}</Card.Description> 
-        </div>
+        <ul>
+        <li><span className="font-bold"><p>Population:</p></span><Card.Meta>{char.population.toLocaleString()}</Card.Meta></li>
+        <li><span className="font-bold"></span><p>Region:</p><Card.Meta>{char.region}</Card.Meta></li>
+        <li><span className="font-bold"></span><p>Capital:</p><Card.Description>{char.capital}</Card.Description></li>
+        </ul>
         </Card.Content> 
-        {/* <div className="col-md-3">
-                        <Link to={`/launch${flight_number}`} className="btn btn-secondary">Launch Details</Link>
-                   </div> */}
+        </div>
   </Card> )}
       </section>
     
