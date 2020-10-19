@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Navbar'
 import Rounter from './components/Rounter'
 import SearchForm from './components/SearchForm'
-import RegionForm from './components/RegionForm'
+import RegionForm from './components/RegionFilter'
 // import Details from './components/Details'
 function App() {
   return (
