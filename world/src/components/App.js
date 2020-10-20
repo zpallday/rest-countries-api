@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
-import Countries from './components/WorldCard';
-import CountryDetail from './components/Details';
-import CountryFilters from './components/countryFilter';
-import Navbar from './components/Navbar';
+import '../App.css';
+import Countries from './WorldCard';
+import CountryDetail from './Details';
+import CountryFilters from './countryFilter';
+import Navbar from './Navbar';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
