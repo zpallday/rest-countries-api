@@ -1,17 +1,20 @@
-// import React from 'react'; 
-// import { Card, Image } from 'semantic-ui-react'; 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Country from './WorldList';
 
-// export default function WorldCard({ char }) { 
-//  return ( 
-//   <Card> 
-//       <Image src={char.flag} wrapped ui={false} /> 
-//         <Card.Content> 
-//         <Card.Header>{char.population}</Card.Header> 
-//         <Card.Meta>{char.region}</Card.Meta>
-//         <Card.Description>{char.capital}</Card.Description> 
-//         </Card.Content> 
-//   </Card> 
-// ); 
+const Countries = (props) => {
+    return (
+        <>
+            {
+                props.countries.map((country) => {
+                    return (<Link key={country.alpha3Code} className="block m-auto" to={'/detail/' + country.alpha3Code}>
+                        <Country country={country} />
+                    </Link>)
+                }
+                )
+            }
+        </>
+    );
+}
 
-
-// } 
+export default Countries;
