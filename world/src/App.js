@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './hooks/tailwind.css';
-import Countries from './components/WorldList';
+import './App.css';
+import Countries from './components/WorldCard';
 import CountryDetail from './components/Details';
-import SeacherFilters from './components/SeachFilter';
-import Header from './components/Navbar';
+import CountryFilters from './components/countryFilter';
+import Navbar from './components/Navbar';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
@@ -58,12 +58,12 @@ const App = () => {
   return (
     <>
       <Router>
-        <Header />
+        <Navbar/>
         <Switch>
           <Route path="/" exact>
             <>
-              <div className="min-h-screen px-12 py-4">
-                <SeacherFilters regionFilter={regionFilter} searchString={searchString} handleRegionFilter={handleRegionFilter} handleInputSearch={handleInputSearch} />
+              <div className="min-h-screen px-12 py-4 bg-secondary">
+                <CountryFilters regionFilter={regionFilter} searchString={searchString} handleRegionFilter={handleRegionFilter} handleInputSearch={handleInputSearch} />
                 <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-4">
                   <Countries countries={filterByRegion(filterbySearchString(countries, searchString), regionFilter)} />
                 </div>

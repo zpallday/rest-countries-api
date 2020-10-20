@@ -1,50 +1,22 @@
 import React from 'react';
-import axios from 'axios';
-import { Card, Image } from 'semantic-ui-react'; 
-import { Link } from 'react-router-dom'
 
+const Country = (props) => {
+    return (<div>
+        <div className="h-full max-w-xs overflow-hidden rounded shadow-sm bg-primary">
+            <div className="h-48">
+                <img className="object-fill w-full h-full " src={props.country.flag} alt={(props.country) + "flag"} />
+            </div>
+            <div className="px-6 py-4">
+                <div className="mb-2 text-xl font-bold">{props.country.name}</div>
+                <ul>
+                    <li><span className="font-bold">Population: </span> {props.country.population}</li>
+                    <li><span className="font-bold">Region: </span> {props.country.region}</li>
+                    <li><span className="font-bold">Capital: </span> {props.country.capital}</li>
 
-export default class PersonList extends React.Component {
-  state = {
-    persons: [],
-  }
-
-  componentDidMount() {
-    axios.get(`https://restcountries.eu/rest/v2/all`)
-      .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-      })
-  };
-
-
-  render() {
-    
-    return (
-      <section className="h-full max-w-xs overflow-hidden rounded shadow-sm bg-primary">
-        { this.state.persons.map(char => <Card> 
-          <div className="h-48">
-        <div className="object-fill w-full h-full"><Image src={char.flag}/></div>
+                </ul>
+            </div>
         </div>
-       <div className="px-6 py-4">
-        <Card.Content> 
-        <div className='mb-2 text-xl font-bold'>
-        <Card.Header>{char.name}</Card.Header>
-        </div>
-        <ul>
-        <li><span className="font-bold"><p>Population:</p></span><Card.Meta>{char.population.toLocaleString()}</Card.Meta></li>
-        <li><span className="font-bold"></span><p>Region:</p><Card.Meta>{char.region}</Card.Meta></li>
-        <li><span className="font-bold"></span><p>Capital:</p><Card.Description>{char.capital}</Card.Description></li>
-        </ul>
-        </Card.Content> 
-        </div>
-  </Card> )}
-      </section>
-    
-
-    )
-
-  }
-
+    </div >);
 }
 
+export default Country;

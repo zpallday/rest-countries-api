@@ -7,6 +7,7 @@ const Navbar = () => {
             setColorSchema('dark');
             document.documentElement.style.setProperty('--primary', 'hsl(207, 26%, 17%)');
             document.documentElement.style.setProperty('--secondary', ' hsl(209, 23%, 22%)');
+            document.documentElement.style.setProperty('--thrid', ' hsl(209, 23%, 22%)');
             document.documentElement.style.setProperty('--primary-text', 'hsl(0, 0%, 100%)');
 
         }

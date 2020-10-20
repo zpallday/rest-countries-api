@@ -2353,6 +2353,10 @@ video {
   background-color: var(--primary);
 }
 
+.bg-thrid {
+  background-color: var(--thrid);
+}
+
 .bg-secondary {
   background-color: var(--secondary);
 }
@@ -70463,5 +70467,9 @@ video {
 
   .xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+   .xl\:bg-thrid  {
+    color: var(--thrid);
   }
 }

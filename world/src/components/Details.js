@@ -16,9 +16,9 @@ const CountryDetail = (props) => {
 
     return (
         (country ?
-            <div className="px-12 py-4">
+            <div className="px-12 py-32 bg-secondary">
                 <div className="max-w-xs mt-4">
-                    <Link to="/" className="inline-flex items-center p-2 shadow-sm bg-primary" >
+                    <Link to="/" className="inline-flex items-center p-2 shadow-sm bg-primary">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z" />
                             <path fillRule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -30,7 +30,7 @@ const CountryDetail = (props) => {
                     <div>
                         <img alt="" className="object-fill w-full h-full" src={country.flag} />
                     </div>
-                    <div className="md:px-12">
+                    <div className="md:px-12 pt-40">
                         <h3 className="text-2xl font-bold">{country.name}</h3>
                         <div className="flex flex-col justify-between mt-4 md:flex-row">
                             <div className="mb-4 md:mb-0">
@@ -47,10 +47,10 @@ const CountryDetail = (props) => {
                             </div>
                         </div>
                         <div className="mt-32">
-                            <span className="font-bold">Border Countries: </span>
+                            {/* <span className="font-bold">Border Countries: </span>
                             {country.borders.map(border => (<Link key={border} to={('/detail/' + border)} className="inline-flex p-2 m-2 shadow-sm bg-primary" >
                                 {filterCoutry(countries, border).name}
-                            </Link>))}
+                            </Link>))} */}
                         </div>
                     </div>
                 </div>

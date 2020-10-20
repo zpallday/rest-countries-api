@@ -1,6 +1,6 @@
 import React from 'react';
 import RegionFilter from './RegionFilter';
-import SearchFilter from './SearchFilter';
+import SearchFilter from './SeachFilter';
 
 const CountryFilters = (props) => {
     return (
