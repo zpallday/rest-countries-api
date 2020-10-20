@@ -1,21 +1,17 @@
 import React from 'react';
 import './App.css';
-import Nav from './components/Navbar'
 import Rounter from './components/Rounter'
 import SearchForm from './components/SearchForm'
 import RegionForm from './components/RegionFilter'
 // import Details from './components/Details'
+import NavBar from './components/Navbar'
 function App() {
   return (
     <body>
-    <div className="App">
-      <Nav/>
-      <div className="forms">
+      <NavBar/>
       <SearchForm/>
       <RegionForm/>
-      </div>
       <Rounter />
-    </div>
     {/* <Details /> */}
     </body>
   );
