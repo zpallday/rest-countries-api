@@ -16,7 +16,7 @@ const CountryDetail = (props) => {
 
     return (
         (country ?
-            <div className="px-12 py-32 bg-secondary">
+            <div className="px-12 py-40 bg-secondary">
                 <div className="max-w-xs mt-4">
                     <Link to="/" className="inline-flex items-center p-2 shadow-sm bg-primary">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

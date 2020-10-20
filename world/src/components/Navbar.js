@@ -20,7 +20,7 @@ const Navbar = () => {
     }
     return (
         <div className="flex justify-between px-8 py-4 shadow-sm bg-primary">
-            <h5 className="p-2 text-lg font-bold">Where in the world?</h5>
+            <h5 className="p-2 text-lg font-bold">Where in the World</h5>
             <button className="flex items-center p-2" onClick={toggleColorSchema} >
                 {colorSchema === 'dark' ? <>
                     <svg width="1em" height="1em" viewBox="0 0 16 16" className="text-primary-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
