@@ -1,3 +1,5 @@
+import './world/src/App'
+
 module.exports = {
     plugins: [
         require('tailwindcss'),
@@ -6,3 +8,4 @@ module.exports = {
             require('cssnano') : false
     ]
 }
+
